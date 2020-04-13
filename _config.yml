@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title : Wyver Solutions Ltd
+company: Wyver Solutions Ltd
+title : Presentations
 tagline: Learning Technology Architects
 description: 'Learning Technology Architects: consulting, supplier selection, implementation management and training'
 author :
