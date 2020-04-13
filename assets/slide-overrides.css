@@ -1,5 +1,9 @@
 /* Slides */
 
+body, p, li, td, th {
+    font-size: 0.85em;
+}
+
 .client-logo {
     position: absolute;
     width: 120px;
@@ -46,4 +50,8 @@
 .presenter-email p {
     font-size: 1.3em;
     font-family: arial;
+}
+
+th, td {
+    vertical-align: top;
 }

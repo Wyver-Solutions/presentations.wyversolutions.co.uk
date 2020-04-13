@@ -1,0 +1,32 @@
+---
+layout: slides
+title: Lean Product Development
+description: A model for creating products that people want to use
+date: 04/03/2016
+theme: white
+transition: slide
+client: Wyver
+logo: images/wyversolutions_logo_3001.png
+
+
+---
+<!-- TO MANAGE VERTICAL SECTIONS put hasChildren: true in the first slide and endVertical: true in the last slide of the vertical section -->
+{% for slide in site.leanproducts %}
+
+{% if slide.hasChildren == true %}
+    <section>
+{% endif %}
+        <section data-background-image="{{ slide.backgroundImage }}" data-background-opacity="0.5" data-background-color="{{ slide.backgroundColor }}">
+            <div class="content">
+                <h2>{{ slide.title }}</h2>
+                {% if slide.subtitle %}<h3>{{ slide.subtitle }}</h3>{% endif %}
+                {{ slide.content }}
+            </div>
+            <aside class="notes">
+                {{ slide.notes }}
+            </aside>
+        </section>
+{% if slide.endVertical == true %}
+    </section>
+{% endif %}
+{% endfor %}

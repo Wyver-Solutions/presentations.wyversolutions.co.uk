@@ -34,16 +34,17 @@ theme:
 #  - jekyll-feed
 #  - jekyll-sitemap
 #  - jekyll-paginate
- 
 
 collections_dir: my_collections
 
 collections:
-    ufiwebinar:
-       output: false
-       permalink: /ufiwebinar/:path/
+  ufiwebinar:
+    output: false
+    permalink: /ufiwebinar/:path/
+  leanproducts:
+    output: false
+    permalink: /leanproducts/:path/
 
-      
 defaults:
     values:
       layout: page 
@@ -51,7 +52,7 @@ defaults:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
- exclude:
+exclude:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
