@@ -3,21 +3,30 @@ layout: default
 ---
 
   <div class="col_12">
-    {% for page in site.pages %}
-      {% unless page.exclude %}
-        <div class="col_6">
-          
-            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-          </div>
-          
-          <div class="col_6">
-            <p>{{ page.description }}</p>
-            <p class="itemDate">{{ page.date }}</p>
-          </div>
-        
-    {% endunless %}
-  {% endfor %}
-  </div>
+    <table id="presentations" class="display sortable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for page in site.pages %}
+          {% unless page.exclude %}
+            {% if page.url contains ".xml" %}
+            {% else %}
+            <tr>
+              <td><a href="{{ page.url }}">{{ page.title }}</a></td>
+              <td>{{ page.description }}</td>
+              <td>{{ page.date }}</td>
+            </tr>
+            {% endif %}
+        {% endunless %}
+      {% endfor %}
+      </tbody>
+    </table>
+ </div>
 
   <!--
   {%- if site.posts.size > 0 -%}

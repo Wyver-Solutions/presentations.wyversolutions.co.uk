@@ -22,19 +22,18 @@ author :
   email : mberthelemy@wyversolutions.co.uk
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://presentations.wyversolutions.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 
+github_username:  
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
+theme: 
+# plugins:
 #  - jekyll-feed
 #  - jekyll-sitemap
 #  - jekyll-paginate
-
-url: https://presentations.wyversolutions.co.uk
+ 
 
 collections_dir: my_collections
 
@@ -51,11 +50,11 @@ defaults:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
+ exclude:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
