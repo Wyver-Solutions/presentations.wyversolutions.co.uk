@@ -4,6 +4,10 @@ body, p, li, td, th {
     font-size: 0.85em;
 }
 
+a, a:visited {
+    color: blue;
+}
+
 .client-logo {
     position: absolute;
     width: 120px;
@@ -17,6 +21,12 @@ body, p, li, td, th {
 
 .client-logo img {
     max-width: 100%;
+}
+
+.client-logo p {
+    font-family: arial;
+    font-size: 1em;
+    text-align: center;
 }
 
 .content {
