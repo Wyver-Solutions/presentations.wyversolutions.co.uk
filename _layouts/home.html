@@ -7,22 +7,25 @@ layout: default
       <thead>
         <tr>
           <th>Title</th>
+          <th>Topic</th>
           <th>Description</th>
           <th>Date</th>
         </tr>
       </thead>
       <tbody>
         {% for page in site.pages %}
-          {% unless page.exclude %}
+        
+          {% if page.layout == 'slides' %}
             {% if page.url contains ".xml" %}
             {% else %}
             <tr>
               <td><a href="{{ page.url }}">{{ page.title }}</a></td>
+              <td>{{ page.topic }}</td>
               <td>{{ page.description }}</td>
               <td>{{ page.date }}</td>
             </tr>
             {% endif %}
-        {% endunless %}
+        {% endif %}
       {% endfor %}
       </tbody>
     </table>
