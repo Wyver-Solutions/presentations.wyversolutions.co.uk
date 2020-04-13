@@ -1,0 +1,49 @@
+/* Slides */
+
+.client-logo {
+    position: absolute;
+    width: 120px;
+    left: 20px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 9999;
+}
+
+.client-logo img {
+    max-width: 100%;
+}
+
+.content {
+    background-color: rgba(255,255,255,0.7);
+    padding: 5px;
+}
+
+.imageCredit {
+    position: fixed;
+    bottom: 20px;
+    font-size: 0.5em;
+    background-color: #000;
+    color: #fff;
+    padding: 1px;
+    z-index:9999;
+}
+
+.imageCredit a {
+    color: #fff;
+}
+
+.presenter-email {
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px
+    
+    
+}
+
+.presenter-email p {
+    font-size: 1.3em;
+    font-family: arial;
+}
