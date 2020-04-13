@@ -3,3 +3,7 @@
     padding: 1.5em 2em 1em 0;
     font-weight: bold;
 }
+
+th, td {
+    font-size: 1em;
+}
