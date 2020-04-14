@@ -7,7 +7,8 @@ date: 23/03/2020
 theme: white
 transition: slide
 client: UFI
-logo: images/ufi_brand_logotype_rgb_passionate_ruby.png
+logo: ufi_brand_logotype_rgb_passionate_ruby.png
+permalink: /ufi/webinar-26032020/
 
 
 ---
@@ -17,7 +18,7 @@ logo: images/ufi_brand_logotype_rgb_passionate_ruby.png
 {% if slide.hasChildren == true %}
     <section>
 {% endif %}
-        <section data-background-image="{{ slide.backgroundImage }}" data-background-opacity="0.5">
+        <section data-background-image="{{ page.imagesURL }}/{{ slide.backgroundImage }}" data-background-opacity="0.5">
             <div class="content">
                 <h2>{{ slide.title }}</h2>
                 {% if slide.subtitle %}<h3>{{ slide.subtitle }}</h3>{% endif %}

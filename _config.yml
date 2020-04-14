@@ -17,7 +17,7 @@
 company : Wyver Solutions Ltd
 title : Presentations
 tagline: Learning Technology Architects
-description: 'Learning Technology Architects: consulting, supplier selection, implementation management and training'
+description: 'Learning Technology Architects - providing consulting, supplier selection, implementation management and training services'
 author :
   name : Mark Berthelemy
   email : mberthelemy@wyversolutions.co.uk
@@ -41,13 +41,16 @@ collections:
   ufiwebinar:
     output: false
     permalink: /ufiwebinar/:path/
-  leanproducts:
+  leanproducts: 
     output: false
     permalink: /leanproducts/:path/
 
 defaults:
+  - 
+    scope:
+      type: "ufiwebinar"
     values:
-      layout: page 
+      imagesURL: "/presentations/ufi/webinar-23032020/images"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
