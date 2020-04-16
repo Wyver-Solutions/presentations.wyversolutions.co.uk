@@ -1,0 +1,34 @@
+---
+layout: slides
+title: Introduction to xAPI 
+description: |
+    A non-technical intro to xAPI and what it offers, based on our 2014 booklet: <a href="https://www.slideshare.net/MarkBerthelemy/exploring-the-potential-of-the-xapi-aka-tin-can-api" target="_blank">Exploring the potential of xAPI</a>
+topic: Data
+date: 16/04/2020
+theme: white
+transition: slide
+client: Wyver
+logo: images/wyversolutions_logo_3001.png
+
+
+---
+<!-- TO MANAGE VERTICAL SECTIONS put hasChildren: true in the first slide and endVertical: true in the last slide of the vertical section -->
+{% for slide in site.xapi %}
+
+{% if slide.hasChildren == true %}
+    <section>
+{% endif %}
+        <section data-background-image="{{ slide.backgroundImage }}" data-background-opacity="0.5" data-background-color="{{ slide.backgroundColor }}">
+            <div class="content">
+                <h2>{{ slide.title }}</h2>
+                {% if slide.subtitle %}<h3>{{ slide.subtitle }}</h3>{% endif %}
+                {{ slide.content }}
+            </div>
+            <aside class="notes">
+                {{ slide.notes }}
+            </aside>
+        </section>
+{% if slide.endVertical == true %}
+    </section>
+{% endif %}
+{% endfor %}
