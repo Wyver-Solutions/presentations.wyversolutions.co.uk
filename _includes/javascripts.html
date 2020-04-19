@@ -6,10 +6,21 @@
 
 <script>
   $(document).ready( function () {
-    //$('#presentations').DataTable({
-    //    "order": [2],
-    //    responsive: true
-    // });
+    $('#presentations').DataTable({
+        "order": [2],
+        "responsive": { breakpoints: [
+        { name: 'desktop', width: Infinity },
+        { name: 'tablet',  width: 1024 },
+        { name: 'phone',   width: 768 }
+    ]},
+  "columns": [
+      {"className": "all"},
+    {"className": "all"}, 
+    {"className": "min-tablet"}, 
+    {"className": "min-tablet"}, 
+     
+    ],
+     });
 } );
 
 </script>
