@@ -38,9 +38,9 @@ theme:
 collections_dir: my_collections
 
 collections:
-  ufiwebinar:
+  ufiwebinar1:
     output: false
-    permalink: /ufiwebinar/:path/
+    permalink: /ufiwebinar1/:path/
   leanproducts: 
     output: false
     permalink: /leanproducts/:path/
@@ -51,9 +51,9 @@ collections:
 defaults:
   - 
     scope:
-      type: "ufiwebinar"
+      type: "ufiwebinar1"
     values:
-      imagesURL: "/presentations/ufi/webinar-23032020/images"
+      imagesURL: "/presentations/ufi/how-to-move-training-online/images"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

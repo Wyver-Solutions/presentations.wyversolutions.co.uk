@@ -4,7 +4,7 @@ subtitle:
 hasChildren: false
 backgroundImage:
 ---
-{% for slide in site.ufiwebinar %}
+{% for slide in site.ufiwebinar1 %}
 {% if slide.backgroundImage %}
 {{ slide.title }}: <a href="{{ slide.backgroundImageSourceURL}}" target="_blank">{{ slide.backgroundImageCredit }}</a>
 {% endif %}
