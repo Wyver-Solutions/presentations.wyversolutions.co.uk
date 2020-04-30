@@ -1,6 +1,6 @@
 ---
 title: Useful sources
-hasChildren: false
+hasChildren: true
 ---
 <img style="float:right; margin: 0 0 0px 20px;" src="images/really-useful-elearning-instruction-manual.jpg" alt="Book cover" />
 
