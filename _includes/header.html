@@ -1,26 +1,69 @@
 <header class="site-header" role="banner">
 
-<!-- Menu Horizontal -->
-<ul class="menu">
-<li><a href="https://www.wyversolutions.co.uk">Return to main site</a></li>
-<!--<li class="current"><a href="">Item 2</a></li>
-<li><a href=""><span class="icon" data-icon="R"></span>Item 3</a>
-  <ul>
-  <li><a href=""><i class="fa fa-car"></i> Sub Item</a></li>
-  <li><a href=""><i class="fa fa-arrow-circle-right"></i> Sub Item</a>
-    <ul>
-    <li><a href=""><i class="fa fa-comments"></i> Sub Item</a></li>
-    <li><a href=""><i class="fa fa-check"></i> Sub Item</a></li>
-    <li><a href=""><i class="fa fa-cutlery"></i> Sub Item</a></li>
-    <li><a href=""><i class="fa fa-cube"></i> Sub Item</a></li>
-    </ul>
-  </li>
-  <li class="divider"><a href=""><i class="fa fa-file"></i> li.divider</a></li>
-  </ul>
-</li>
-<li><a href="">Item 4</a></li>-->
-<li class="title">{{ site.company }}</li>
-</ul>
+  <div id="ident">
+  <div class="logo">
+        <a href="/index.html">
+        <img src="/assets/wyversolutions_logo_900.png" alt="Wyver Solutions logo" style="object-fit: contain; width:100%" />
+        </a>
+    </div>
+
+    <!--<div class="col_3">
+        {% if page.url != "/" %}<div id="searchbox" class="desktop-only">
+        <input style="width: inherit;" type="text" class="st-default-search-input search-pages">
+    </div>{% endif %}
+    </div>-->
+
+    <div id="menu-container">
+        
+        <!-- Button for small screens -->
+ 
+
+        <nav id="nav-wrap">
+           <label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+            <input type="checkbox" class="hide" id="show-menu" role="button">
+
+            {% assign pages = site.pages | sort:"name" %}
+            
+            
+            <ul id="menu" class="menu">
+              <li><a href="https://www.wyversolutions.co.uk">Return to main site</a></li>
+                
+            <!-- <ul id="main-menu" class="nav-bar sf-menu"  > -->
+                {% assign blog = 0 %}
+                  {% for p in pages %}
+                    
+                    {% if p.menu == 'main' %}
+
+                        {% if page.layout == "post" and p.title == "Blog" and blog == 0 %}
+                            {% assign blog = 1 %}
+                                <li class="current">
+                                    <a href="/blog">{{ p.title }}</a>
+                                </li>
+
+                        {% elsif p.title == "Blog" and blog == 0 %}
+                               {% assign blog = 1 %}                     
+                                <li {% if p.url == page.url %}class="current"{% endif %}>
+                                    <a href="/blog">{{ p.title }}</a>
+                                </li>
+                        {% elsif p.title != "Blog" %}
+                            {% assign pageurl = page.url | slice:0,6 %}
+                        <li{% if p.url == page.url %} class="current"{% endif %}>
+                         <a href="{{ p.url }}">{{ p.title }}</a>
+                      </li>
+
+                      
+                      {% endif %}
+                      
+                    {% endif %}
+                  {% endfor %}
+                 
+            </ul>
+    
+        </nav>
+    </div> <!-- End of menu -->
+</div>
+
+
 
   
 <!-- ===================================== END HEADER ===================================== -->
