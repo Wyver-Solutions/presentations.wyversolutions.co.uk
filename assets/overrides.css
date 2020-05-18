@@ -790,9 +790,10 @@ div .portrait img {
         display:block;
         width: 30px;
         position: absolute;
-        top: 70px;
+        top: 10px;
         left:10px;
         cursor: hand;
+        color: #fff;
     }
 
     .section-icon {
